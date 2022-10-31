@@ -31,7 +31,6 @@ contract StoreCreator {
         Store newStore = new Store(msg.sender);
         address newStoreAddress = address(newStore);
         userStore[msg.sender] = StoreInfo(newStoreAddress, msg.sender, _storeName, true);
-        // Add logic to create a new store here
         emit NewStore(_storeName, newStoreAddress, msg.sender);
     }
 
