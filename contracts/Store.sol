@@ -28,7 +28,7 @@ contract Store {
         storeName = _storeName;
     }
 
-    function add_product(string memory _productUUID, uint256 _price, string memory _ipfsHash) public {
+    function add_product(string memory _productUUID, uint256 _price, string memory _ipfsHash) onlyOwner public {
         products[_ipfsHash] = Product(_productUUID, _price, _ipfsHash);
     }
 
